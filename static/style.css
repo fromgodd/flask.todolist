@@ -1,0 +1,101 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+/* Task Card Styling */
+.task-card {
+    text-align: center;
+    border-radius: 10px;
+    min-height: 150px;
+    border: 2px solid black; /* Adds solid border (stroke) */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Task Hover Effect */
+.task-card:hover {
+    transform: scale(1.05);
+}
+/* Delete Button (X) Styling */
+.delete-btn {
+    font-size: 22px;  /* Increase size */
+    font-weight: bold; /* Make it bold */
+    position: absolute;
+    top: 8px;  /* Move it inside the card */
+    right: 10px; /* Adjust spacing */
+    cursor: pointer;
+    text-decoration: none;
+    color: red; /* Make it clearly visible */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Delete Button Hover Effect */
+.delete-btn:hover {
+    transform: scale(1.2);  /* Slight grow effect */
+}
+
+/* Delete Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* Input Field Styling */
+.uk-input {
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* Button Styling */
+.uk-button-primary {
+    background: purple;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Notification Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Success & Error Notifications */
+.success {
+    background: #4CAF50;
+    color: white;
+}
+
+.error {
+    background: #E57373;
+    color: white;
+}
